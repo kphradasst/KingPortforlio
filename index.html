@@ -10,7 +10,7 @@
 </head>
 <body>
     <header>
-        <a href="#" class="logo">K</a>
+
         <div class="menu-toggle" id="mobile-menu">
             <i class="fas fa-bars"></i>
         </div>
@@ -23,18 +23,11 @@
             <a href="exp.html" >Experience</a>
             <a href="contact.html" >Contact</a>
         </nav>
-        <script>
-            const mobileMenu = document.getElementById('mobile-menu');
-            const navMenu = document.getElementById('menu');
         
-            mobileMenu.addEventListener('click', () => {
-                navMenu.classList.toggle('active');
-            });
-        </script>
     </header>
     <section class="home">
         <div class="home-img">
-            <img src="cv.JPG" alt="">
+            <img src="cv.png" alt="">
         </div>
         <div class="home-content">
             <h1>Hi, It's <span>King</span></h1>
@@ -52,5 +45,13 @@ VBA.</p>
             <a href="mailto:timikingperuelo@gmail.com" class="btn">Hire me</a>
         </div>
     </section>
+<script>
+        const mobileMenu = document.getElementById('mobile-menu');
+        const navMenu = document.getElementById('menu');
+
+        mobileMenu.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+        });
+    </script>
 </body>
 </html>
