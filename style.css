@@ -112,6 +112,27 @@ nav a.active{
     color: #b74b4b;
     border-bottom: 3px solid #b74b4b;
 }
+nav {
+    display: none; /* Hide menu by default */
+}
+    .menu-toggle {
+        display: none; /* Hide menu button on desktop */
+    }
+
+    /* Show nav when active on desktop */
+    nav.active {
+        display: block; /* Display menu when active class is added */
+    }
+
+    /* Optional: adjust nav styles for desktop */
+    nav {
+        display: flex;
+        justify-content: space-around; /* Adjust to your layout */
+        background-color: transparent; /* Transparent background for desktop */
+        position: static; /* Remove the absolute positioning for desktop */
+        width: auto;
+    }
+}
 
 @media(max-width:995px){
     nav{
@@ -128,11 +149,11 @@ nav a.active{
         border-top: 0.1rem solid rgba(0,0,0,0.1);
     }
 
-    nav.active{
+    nav.active {
         display: block;
     }
 
-    nav a{
+    nav a {
         display: block;
         font-size: 2rem;
         margin: 3rem 0;
@@ -303,6 +324,7 @@ span{
 }
 
 @media(max-width:995px){
+	
     .home{
         flex-direction: column;
         margin: 5rem 4rem;
@@ -320,6 +342,7 @@ span{
         width: 70vw;
         margin-top: 4rem;
     }
+
 .tooltip {
     position: relative;
     display: inline-block;
@@ -351,4 +374,3 @@ span{
 }
 
 }
-
