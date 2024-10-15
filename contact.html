@@ -46,5 +46,41 @@
             <a href="mailto:timikingperuelo@gmail.com" class="btn">Hire me</a>
         </div>
     </section>
+	<script>
+        const mobileMenu = document.getElementById('mobile-menu');
+        const navMenu = document.getElementById('menu');
+
+        mobileMenu.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+        });
+    </script>
+	<script>
+        document.getElementById('save-contact-btn').addEventListener('click', function () {
+            // Create vCard data
+            const vCardData = `
+                BEGIN:VCARD
+                VERSION:3.0
+                N:Peruelo;King;;;
+                FN:King Peruelo
+                TEL;TYPE=CELL:09912345982
+                EMAIL:timikingperuelo@gmail.com
+                ADR:;;Block 1 lot 38 Mercedes Homes 3a;Binan;Laguna;;;
+                END:VCARD
+            `;
+
+            // Create a blob with the vCard data
+            const blob = new Blob([vCardData], { type: 'text/vcard' });
+            const url = window.URL.createObjectURL(blob);
+
+            // Create a temporary link element to trigger the download
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = 'king-peruelo-contact.vcf';
+            a.click();
+
+            // Clean up the URL object after download
+            window.URL.revokeObjectURL(url);
+        });
+    </script>
 </body>
 </html>
